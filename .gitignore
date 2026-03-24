@@ -1,0 +1,8 @@
+scripts/serviceAccountKey.json
+.venv/
+__pycache__/
+*.pyc
+.env
+data/CVs1/
+output/
+.DS_Store
