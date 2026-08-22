@@ -12,8 +12,12 @@ Job Description:
 
 Make it confident, engaging, and highlight how the candidate is a strong fit. Avoid copying the job description directly.
 """
+import os
 
-    API_KEY = "599105cbc41a4f6fb6d32c3fb8a57911"  # Replace with your AIML API key
+    API_KEY = os.getenv("AIML_API_KEY")
+    if not API_KEY:
+        return "⚠️ API Error: AIML_API_KEY environment variable is not set."
+
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json"
